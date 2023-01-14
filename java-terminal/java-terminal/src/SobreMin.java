@@ -1,11 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class SobreMin {
     public static void main(String[] args) {
 
-        String nome = args [0];
-        String sobrenome = args[1];
-        int idade = Integer.valueOf(args[2]);
-        double altura = Double.valueOf(args[3]);
-        double peso = Double.valueOf(args[4]);
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+        System.out.println("Digite a Altura");
+        double altura = scanner.nextDouble();
+
+        System.out.println("Digite o seu nome");
+        String nome = scanner.next();
+
+        System.out.println("Digite seu Sobrenome");
+        String sobrenome = scanner.next();
+
+        System.out.println("Digite sua idade");
+        int idade = scanner.nextInt();
+
+        System.out.println("Digite seu peso");
+        double peso = scanner.nextDouble();
+
+        
 
         
         System.out.println("Olá, sou " + nome + " " + sobrenome);
